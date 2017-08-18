@@ -25,6 +25,7 @@
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
 (setq typescript-indent-level 2)
+(setq c-default-style "linux" c-basic-offset 4)
 
 (setq-default tab-width 4 indent-tabs-mode nil)
 (set-face-attribute 'linum nil :foreground "green")
