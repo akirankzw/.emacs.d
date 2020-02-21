@@ -38,7 +38,7 @@
 
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-h") 'backward-kill-word)
-(global-set-key (kbd "C-h") 'delete-backward-char)
+;; (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
@@ -59,3 +59,35 @@
 
 (require 'ruby-end)
 (ruby-end-mode t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (gtags twittering-mode org yaml-mode typescript-mode typescript slim-mode scss-mode sass-mode ruby-end ruby-block rainbow-delimiters org-mobile-sync org-ac json-mode flycheck))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(setq org-log-done 'time)
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/workspace/org-mode/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("m" "Metaphrase" entry (file "~/workspace/org-mode/metaphrase.org")
+         "* %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/workspace/org-mode/journal.org")
+         "* %?\n#+BEGIN_QUOTE\n#+END_QUOTE\nEntered on %U\n  %i\n")))
+
+(require 'twittering-mode)
+;; (setq twittering-use-master-password t)
+
+(require 'gtags)
+(global-set-key "\M-t" 'gtags-find-tag)
+(global-set-key "\M-r" 'gtags-find-rtag)
+(global-set-key "\M-s" 'gtags-find-symbol)
+(global-set-key "\C-e" 'gtags-pop-stack)
