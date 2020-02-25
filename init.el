@@ -89,5 +89,6 @@
 (require 'gtags)
 (global-set-key "\M-t" 'gtags-find-tag)
 (global-set-key "\M-r" 'gtags-find-rtag)
-(global-set-key "\M-s" 'gtags-find-symbol)
-(global-set-key "\C-e" 'gtags-pop-stack)
+(global-set-key "\M-w" 'gtags-find-symbol)
+(global-set-key "\C-a" 'gtags-pop-stack)
+(define-key gtags-select-mode-map "\C-m" 'gtags-select-tag)
