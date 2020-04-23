@@ -66,7 +66,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (gtags twittering-mode org yaml-mode typescript-mode typescript slim-mode scss-mode sass-mode ruby-end ruby-block rainbow-delimiters org-mobile-sync org-ac json-mode flycheck))))
+    (haml-mode gtags twittering-mode org yaml-mode typescript-mode typescript slim-mode scss-mode sass-mode ruby-end ruby-block rainbow-delimiters org-mobile-sync org-ac json-mode flycheck))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -90,5 +90,5 @@
 (global-set-key "\M-t" 'gtags-find-tag)
 (global-set-key "\M-r" 'gtags-find-rtag)
 (global-set-key "\M-w" 'gtags-find-symbol)
-(global-set-key "\C-a" 'gtags-pop-stack)
+;;(global-set-key "\C-a" 'gtags-pop-stack)
 (define-key gtags-select-mode-map "\C-m" 'gtags-select-tag)
